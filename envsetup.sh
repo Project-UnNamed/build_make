@@ -1845,6 +1845,10 @@ function source_vendorsetup() {
     done
 }
 
+    # use the same sdclang for both primary and secondary toolchain
+    export SDCLANG_PATH=$T/prebuilts/sdclang/bin
+    export SDCLANG_PATH_2=$T/prebuilts/sdclang/bin
+
 validate_current_shell
 source_vendorsetup
 addcompletions
